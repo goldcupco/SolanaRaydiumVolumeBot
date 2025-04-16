@@ -1,5 +1,10 @@
 # main.py
 
+from solana.rpc.api import Client
+from solders.pubkey import Pubkey
+from solders.keypair import Keypair
+
+
 from settings import (
     RPC,
     TOKEN_ADDRESS,
@@ -13,12 +18,9 @@ from settings import (
     PRIVATE_KEYS_FILE,
     THREADS,
 )
-
-# Import your bot class
 from bot import SolanaRaydiumVolumeBot
 
 def main():
-    # Initialize the bot with your configuration
     bot = SolanaRaydiumVolumeBot(
         rpc_endpoint=RPC,
         token_address=TOKEN_ADDRESS,
@@ -32,8 +34,6 @@ def main():
         private_keys_file=PRIVATE_KEYS_FILE,
         threads=THREADS,
     )
-
-    # Run the bot
     bot.run()
 
 if __name__ == "__main__":

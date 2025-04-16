@@ -1,5 +1,8 @@
-solana~=0.35.1
-solders~=0.21.0
-python-dotenv~=1.0.1
+solana
+solders
 construct~=2.10.68
 aiohttp~=3.11.10
+# Optional: for HTTP requests if needed
+requests>=2.25.1
+# Optional: for async support if you implement async functions
+asyncio; python_version >= '3.7'
